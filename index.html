@@ -79,8 +79,20 @@
     .avatar{aspect-ratio:1/1;border-radius:14px;background:#1f2333;margin-bottom:14px}
 
     /* Gallery */
-    .gallery{grid-template-columns:repeat(4,1fr)}
-    .gallery div{aspect-ratio:1/1;border-radius:14px;background:#1f2333}
+    /* Gallery */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:14px;
+    display:block;
+}
 
     /* Contact */
     .contact-grid{display:grid;grid-template-columns:2fr 1fr;gap:28px;margin-top:32px}
@@ -129,7 +141,6 @@
       <h2 class="section-title">Services</h2>
       <p class="section-sub">Professional grooming with the best pricing.</p>
       <div class="grid">
-        <div class="grid">
 
 <div class="card"><h3>Regular Haircut</h3><div class="price">$20</div></div>
 
@@ -161,9 +172,17 @@
   <section id="gallery">
     <div class="container">
       <h2 class="section-title">Gallery</h2>
-      <div class="grid gallery">
-        <div></div><div></div><div></div><div></div>
-      </div>
+    <div class="grid gallery">
+
+<img src="images/first.jpeg" alt="Gallery Photo 1">
+
+<img src="images/second.jpeg" alt="Gallery Photo 2">
+
+<img src="images/third.jpeg" alt="Gallery Photo 3">
+
+<img src="images/fourth.jpeg" alt="Gallery Photo 4">
+
+</div>
     </div>
   </section>
 
@@ -177,13 +196,23 @@
           <p class="section-sub">Suggested Hours (consistent & customer-friendly):<br>
           Mon–Sat: 9 AM – 7 PM<br>Sun: 9 AM – 6 PM</p>
         </div>
-        <div class="card">
-          <strong>Official Hours</strong>
-          <ul class="hours">
-            <li>Mon–Sat: 8:30 AM – 7 PM</li>
-            <li>Sunday: 9 AM – 6 PM</li>
-          </ul>
-        </div>
+   <div class="card">
+  <strong>Follow Us on Instagram</strong>
+
+  <p style="margin-top:15px;">
+    <a
+      href="https://www.instagram.com/exclusive.cuts/"
+      target="_blank"
+      style="color:var(--accent);font-weight:700;font-size:1.1rem;"
+    >
+      @exclusive.cuts
+    </a>
+  </p>
+
+  <p class="section-sub" style="margin-top:10px;">
+    Check out our latest cuts, transformations, and shop updates.
+  </p>
+</div>
       </div>
     </div>
   </section>
